@@ -11,7 +11,7 @@ pipeline {
 
         stage('Step 1.2') {
           steps {
-            waitUntil(initialRecurrencePeriod: 1) {
+            waitUntil(initialRecurrencePeriod: 5) {
               sh 'echo A'
             }
 
