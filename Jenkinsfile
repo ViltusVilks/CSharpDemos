@@ -5,29 +5,37 @@ pipeline {
       parallel {
         stage('Step #1') {
           steps {
-            sh '''sleep 5
-echo A'''
+            sh '''sleep 25
+echo A
+seep 21
+echo A finished'''
           }
         }
 
         stage('Step 1.2') {
           steps {
-            sh '''sleep 4
-echo B'''
+            sh '''sleep 23
+echo B
+seep 21
+echo B finished'''
           }
         }
 
         stage('step 1.3') {
           steps {
-            sh '''sleep 6
-echo C'''
+            sh '''sleep 23
+echo C
+seep 21
+echo C finished'''
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
-            sh '''sleep 5
-echo D'''
+            sh '''sleep 21
+echo D
+seep 21
+echo D finished'''
           }
         }
 
