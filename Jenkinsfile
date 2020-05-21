@@ -5,16 +5,12 @@ pipeline {
       parallel {
         stage('Step #1') {
           steps {
-            slackSend(message: 'zzz 1', attachments: '[]', blocks: '[]')
+            sh 'echo A'
           }
         }
 
         stage('Step 1.2') {
           steps {
-            waitUntil(initialRecurrencePeriod: 5) {
-              sh 'echo A'
-            }
-
             sh 'ech B'
           }
         }
